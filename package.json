@@ -1,7 +1,7 @@
 {
   "name": "markdown-notes-app-localstorage",
-   "homepage": "https://chrisnajman.github.io/markdown-notes-app-localstorage/",
-   "type": "module",
+  "homepage": "https://chrisnajman.github.io/markdown-notes-app-localstorage/",
+  "type": "module",
   "scripts": {
     "start": "vite",
     "dev": "vite",
@@ -12,6 +12,7 @@
     "nanoid": "^3.3.7",
     "react": "17.0.2",
     "react-dom": "17.0.2",
+    "react-icons": "^5.2.1",
     "react-mde": "11.5.0",
     "react-split": "2.0.13",
     "showdown": "1.9.1",
