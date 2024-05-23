@@ -1,6 +1,7 @@
 {
   "name": "markdown-notes-app-localstorage",
    "homepage": "https://chrisnajman.github.io/markdown-notes-app-localstorage/",
+   "type": "module",
   "scripts": {
     "start": "vite",
     "dev": "vite",
