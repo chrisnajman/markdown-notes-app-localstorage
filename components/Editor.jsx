@@ -1,10 +1,11 @@
-import React from "react"
+import React, { useState } from "react"
+import PropTypes from "prop-types"
 import ReactMde from "react-mde"
 import "react-mde/lib/styles/css/react-mde-all.css"
 import Showdown from "showdown"
 
-export default function Editor({ currentNote, updateNote }) {
-  const [selectedTab, setSelectedTab] = React.useState("write")
+function Editor({ currentNote, updateNote }) {
+  const [selectedTab, setSelectedTab] = useState("write")
 
   const converter = new Showdown.Converter({
     tables: true,
@@ -23,9 +24,16 @@ export default function Editor({ currentNote, updateNote }) {
         generateMarkdownPreview={(markdown) =>
           Promise.resolve(converter.makeHtml(markdown))
         }
-        minEditorHeight={80}
+        minEditorHeight={100}
         heightUnits="vh"
       />
     </section>
   )
 }
+
+Editor.propTypes = {
+  currentNote: PropTypes.object,
+  updateNote: PropTypes.func,
+}
+
+export default Editor
