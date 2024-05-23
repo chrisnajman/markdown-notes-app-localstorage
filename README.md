@@ -1,6 +1,6 @@
 # Markdown Notes App (Local Storage)
 
-This is the result of the Scrimba Tutorial [Notes App](https://v2.scrimba.com/learn-react-c0e), specifically, the first half (excluding the setting up of _Firebase / Firestore_).
+This is the result of the Scrimba Tutorial [Notes App (registration required)](https://v2.scrimba.com/learn-react-c0e), specifically, the first half (excluding the setting up of _Firebase / Firestore_).
 
 Much of the code was pre-written. The task was to add functionality to an existing codebase.
 
@@ -15,7 +15,8 @@ Much of the code was pre-written. The task was to add functionality to an existi
 
 ## React Version
 
-> [!IMPORTANT] > `react-mde` (the markdown editor) has not been updated for _React V.18_, so I had to use _V.17_.
+> [!IMPORTANT] 
+> `react-mde` (the markdown editor) has not been updated for _React V.18_, so I had to use _V.17_.
 
 ---
 
