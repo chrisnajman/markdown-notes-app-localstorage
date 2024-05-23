@@ -1,6 +1,6 @@
 {
-  "name": "Scrim-s04mqf3",
-  "description": "https://v2.scrimba.com/learn-react-c0e/~04k",
+  "name": "markdown-notes-app-localstorage",
+   "homepage": "https://chrisnajman.github.io/markdown-notes-app-localstorage/",
   "scripts": {
     "start": "vite",
     "dev": "vite",
