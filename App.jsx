@@ -1,22 +1,19 @@
-import React, { useState, useEffect } from "react"
-import Layout from "./layout/Layout"
+import React from "react"
 import Sidebar from "./components/Sidebar"
 import Editor from "./components/Editor"
 import Split from "react-split"
 import { nanoid } from "nanoid"
 
-function App() {
-  const [notes, setNotes] = useState(
+export default function App() {
+  const [notes, setNotes] = React.useState(
     () => JSON.parse(localStorage.getItem("notes")) || []
   )
-  const [currentNoteId, setCurrentNoteId] = useState(
-    (notes[0] && notes[0].id) || ""
-  )
+  const [currentNoteId, setCurrentNoteId] = React.useState(notes[0]?.id || "")
 
   const currentNote =
     notes.find((note) => note.id === currentNoteId) || notes[0]
 
-  useEffect(() => {
+  React.useEffect(() => {
     localStorage.setItem("notes", JSON.stringify(notes))
   }, [notes])
 
@@ -30,12 +27,12 @@ function App() {
   }
 
   function updateNote(text) {
-    // Put the most recently-modified note at the top
     setNotes((oldNotes) => {
       const newArray = []
       for (let i = 0; i < oldNotes.length; i++) {
         const oldNote = oldNotes[i]
         if (oldNote.id === currentNoteId) {
+          // Put the most recently-modified note at the top
           newArray.unshift({ ...oldNote, body: text })
         } else {
           newArray.push(oldNote)
@@ -45,13 +42,13 @@ function App() {
     })
   }
 
-  function deleteNote(e, noteId) {
-    e.stopPropagation()
+  function deleteNote(event, noteId) {
+    event.stopPropagation()
     setNotes((oldNotes) => oldNotes.filter((note) => note.id !== noteId))
   }
 
   return (
-    <Layout>
+    <main>
       {notes.length > 0 ? (
         <Split
           sizes={[30, 70]}
@@ -74,17 +71,15 @@ function App() {
         </Split>
       ) : (
         <div className="no-notes">
-          <h2>You have no notes</h2>
+          <h1>You have no notes</h1>
           <button
             className="first-note"
             onClick={createNewNote}
           >
-            Create one now
+            Create note
           </button>
         </div>
       )}
-    </Layout>
+    </main>
   )
 }
-
-export default App
