@@ -13,10 +13,19 @@ Much of the code was pre-written. The task was to add functionality to an existi
 
 ---
 
+### Alternative Version using `firestore` to Save Notes
+
+- [Markdown Notes App (Firestore): Git Repository](https://github.com/chrisnajman/markdown-notes-app-firestore)
+
+> [!NOTE] > There isn't a GitHub Page for this version.
+> This is due to database security concerns.
+
+---
+
 ## React Version
 
-> [!IMPORTANT] 
-> `react-mde` (the markdown editor) has not been updated for _React V.18_, so I had to use _V.17_.
+> [!IMPORTANT] > `react-mde` (the markdown editor) has not been updated for _React V.18_.
+> Therefore, I have used _React V.17_ for this project.
 
 ---
 
