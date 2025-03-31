@@ -16,7 +16,7 @@
     "react-mde": "11.5.0",
     "react-split": "2.0.13",
     "showdown": "1.9.1",
-    "vite": "^6.2.3"
+    "vite": "^6.2.4"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "*"
